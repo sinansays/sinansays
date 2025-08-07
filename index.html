@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shawermamas - Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@400;700&display=swap');
+    body {
+      background: radial-gradient(circle at 70% 20%, #ffe5b4 60%, #ffdb99 100%);
+      margin: 0;
+      font-family: 'Open Sans', Arial, sans-serif;
+      color: #4d2c0f;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .shawerma-emoji {
+      font-size: 5rem;
+      margin-bottom: 1.2rem;
+      filter: drop-shadow(2px 4px 4px #ffdb9970);
+      animation: wiggle 1.6s infinite ease-in-out;
+    }
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(-6deg);}
+      50% { transform: rotate(8deg);}
+    }
+    .title {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+      color: #a3681a;
+      text-shadow: 1px 2px 0 #fff2d1, 0 3px 10px #f4c979a0;
+    }
+    .subtitle {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+      color: #6b370d;
+    }
+    .coming-soon {
+      background: #f6c15b;
+      color: #6b370d;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 0.7em 2em;
+      border-radius: 32px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 24px #d19c4c40;
+      letter-spacing: 1.5px;
+    }
+    .email-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5em;
+      margin-bottom: 2.5rem;
+    }
+    .email-form input[type="email"] {
+      padding: 0.7em 1em;
+      border-radius: 25px;
+      border: 1px solid #e7b047;
+      font-size: 1em;
+      outline: none;
+    }
+    .email-form button {
+      padding: 0.6em 1.4em;
+      border-radius: 25px;
+      background: #a3681a;
+      color: #fffbe5;
+      border: none;
+      font-size: 1em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .email-form button:hover {
+      background: #ffb046;
+    }
+    .footer {
+      margin-top: auto;
+      font-size: 0.96em;
+      color: #a38659c9;
+      letter-spacing: 0.4px;
+    }
+    @media (max-width: 500px) {
+      .title { font-size: 2rem;}
+      .subtitle { font-size: 1rem;}
+      .shawerma-emoji { font-size: 3.3rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="shawerma-emoji" aria-label="shawarma">🌯</div>
+  <div class="title">Shawermamas</div>
+  <div class="subtitle">Shawerma so good your momma coulda made it.</div>
+  <div class="subtitle">I'm trying to convince Gaby that a website can be made by a 2nd grader.</div>
+  <div class="subtitle">I hope this proves the point.</div>
+  <div class="coming-soon">Coming Soon!</div>
+  <form class="email-form">
+    <label for="email" style="display:none;">Email</label>
+    <input type="email" id="email" name="email" placeholder="Your email for updates" required>
+    <button type="submit">Notify Me</button>
+  </form>
+  <div class="footer">
+    <span>Made with ❤️ by Shawermamas Team<br>Follow us @shawermamas</span>
+  </div>
+  <script>
+    document.querySelector('.email-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      // You can connect this to a real backend or use a 3rd party like Mailchimp
+      alert('Thanks for your interest! We\'ll keep you posted.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
